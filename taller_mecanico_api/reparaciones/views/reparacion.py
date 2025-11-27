@@ -38,7 +38,7 @@ def calcular_costo_total(request):
         
         return Response({
             'total': total,
-            'mensaje': f'Costo total calculado: ${total}. Clasificación: {tipo_reparacion}'
+            'mensaje': f'Costo total ${total}. Tipo de reparacion: {tipo_reparacion}'
         })
         
     except Exception as e:
