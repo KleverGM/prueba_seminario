@@ -24,11 +24,11 @@ class VehiculoViewSet(viewsets.ModelViewSet):
         if serializer.is_valid():
             vehiculo = serializer.save()
             return Response({
-                'mensaje': 'Vehículo registrado exitosamente',
+                'mensaje': 'Vehiculo registrado correctamente',
                 'vehiculo': VehiculoSerializer(vehiculo).data
             }, status=status.HTTP_201_CREATED)
         return Response({
-            'mensaje': 'Error al registrar el vehículo',
+            'mensaje': 'Error al registrar el vehiculo',
             'errores': serializer.errors
         }, status=status.HTTP_400_BAD_REQUEST)
 
@@ -39,11 +39,11 @@ class VehiculoViewSet(viewsets.ModelViewSet):
         if serializer.is_valid():
             vehiculo = serializer.save()
             return Response({
-                'mensaje': 'Vehículo actualizado exitosamente',
+                'mensaje': 'Vehiculo actualizado correctamente',
                 'vehiculo': VehiculoSerializer(vehiculo).data
             })
         return Response({
-            'mensaje': 'Error al actualizar el vehículo',
+            'mensaje': 'Error al actualizar el vehiculo',
             'errores': serializer.errors
         }, status=status.HTTP_400_BAD_REQUEST)
 
@@ -52,5 +52,5 @@ class VehiculoViewSet(viewsets.ModelViewSet):
         placa = instance.placa
         self.perform_destroy(instance)
         return Response({
-            'mensaje': f'Vehículo con placa {placa} eliminado exitosamente'
+            'mensaje': f'El vehiculo con placa {placa} se ha eliminado correctamente'
         })

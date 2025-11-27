@@ -1,6 +1,6 @@
 from rest_framework import viewsets, filters
 from vehiculos.models import Category
-from vehiculos.serializers import CategorySerializer # type: ignore
+from vehiculos.serializers import CategorySerializer
 
 class CategoryViewSet(viewsets.ModelViewSet):
     queryset = Category.objects.all()
