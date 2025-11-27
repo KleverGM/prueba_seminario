@@ -22,4 +22,4 @@ class Vehiculo(models.Model):
         ordering = ("-created_at",)
 
     def __str__(self):
-        return self.name
+        return f"{self.marca} {self.modelo} - {self.placa}"

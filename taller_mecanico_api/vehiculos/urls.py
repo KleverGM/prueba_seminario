@@ -4,6 +4,6 @@ from vehiculos.views.vehiculo import VehiculoViewSet
 
 router = DefaultRouter()
 router.register(r'categories', CategoryViewSet, basename='category')
-router.register(r'vehiculos', VehiculoViewSet, basename='vechiculo')
+router.register(r'vehiculos', VehiculoViewSet, basename='vehiculo')
 
 urlpatterns = router.urls
